@@ -5,12 +5,12 @@ function App() {
   const [product, setProduct] = useState(null);
 
   const buyProduct = async (productId) => {
-    const response = await axios.post('http://localhost:5000/api/buy', { productId });
+    const response = await axios.post('http://localhost:5001/api/buy', { productId });
     alert('Purchase completed!');
   };
 
   const fetchProduct = async (productId) => {
-    const response = await axios.get(`http://localhost:5000/api/products/${productId}`);
+    const response = await axios.get(`http://localhost:5001/api/products/${productId}`);
     setProduct(response.data);
   };
 
